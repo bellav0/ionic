@@ -13,13 +13,14 @@
   <ion-card class="welcome-card">
     <img src="/assets/shapes.svg" alt=""/>
     <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
+      <ion-card-subtitle>{{comentario.episodio}}</ion-card-subtitle>
+      <ion-card-title>Bem-Vindo, {{comentario.nomeDoUsuario}}</ion-card-title>
+      <ion-icon size="large" name="thumbs-up" (click)="likeOrUnlike(comentario)" color="{{comentario.likes.estadoDoLike ?  'primary': 'light'}}"></ion-icon>
+      {{ comentario.likes.nLikes}}
     </ion-card-header>
     <ion-card-content>
       <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
+      {{comentario.texto}}
       </p>
     </ion-card-content>
   </ion-card>
